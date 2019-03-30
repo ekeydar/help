@@ -32,3 +32,8 @@ psql -h localhost -U postgres -d postgres -p 5433
 echo "localhost:5433:*:postgres:docker" >> ~/.pgpass
 ```
 
+* opentrain restore
+```bash
+python manage.py sqlcreate -D | psql -h localhost -U postgres -d postgres -p 5433
+gunzip -c ~/Downloads/db_2019_03_30_14_29_46.sql.gz | m dbshell
+```
