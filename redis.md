@@ -14,6 +14,6 @@ mkdir -p $HOME/docker/volumes/redis
 
 * Run 
 ```bash
-docker run --network some-network --name some-redis -d redis redis-server --appendonly yes -v $HOME/docker/volumes/docker:/data
+docker run --name my-redis -d redis redis-server --appendonly yes -v $HOME/docker/volumes/docker:/data
 ```
 
